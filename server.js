@@ -39,6 +39,6 @@ const getAllMessages = (response) => {
 const addMessage = (newMessage, response) => {
   messages.push(newMessage);
   response.writeHead(201, { 'Content-Type' : 'application/json' });
-  response.write(JSON.stringify(messages));
+  response.write(JSON.stringify(newMessage));
   response.end();
 }
